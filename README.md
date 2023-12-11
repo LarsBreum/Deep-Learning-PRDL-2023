@@ -26,8 +26,10 @@ https://towardsdatascience.com/spam-filtering-system-with-deep-learning-b8070b28
 
 I will experiment with Abaltion studies of the network.
 
-### Part 2.3: Results, Comparisons and Conclusions
-This section will contain the final results for my spam filter. I will compare my results to other spam filter that already exists and conclude on the project.
+### Part 2.3: Results, Comparisons
+This section will contain the final results for my spam filter. I will compare my results to other spam filter that already exists.
 
+# Part 3. Conclusion
+The last part will be a conclusion on the project
 
 
