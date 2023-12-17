@@ -1,5 +1,5 @@
 # PRDL Deep Learning Report, UPM 2023
-This is the problem definition and planned activities for my examination project regarding Deep Learning during the course "Predictive and Descriptive Learning"2023.
+This is the problem definition and planned activities for my examination project regarding Deep Learning during the course "Predictive and Descriptive Learning" 2023.
 
 
 # The Report
