@@ -1,4 +1,5 @@
 import numpy as np, pandas as pd
+import matplotlib.pyplot as plt
 from matplotlib.pyplot import subplots
 from sklearn.linear_model import (LinearRegression, LogisticRegression, Lasso)
 from sklearn.preprocessing import StandardScaler
@@ -7,7 +8,6 @@ from sklearn.pipeline import Pipeline
 from ISLP import load_data
 from ISLP.models import ModelSpec as MS
 from sklearn.model_selection import (train_test_split, GridSearchCV)
-import matplotlib.pyplot as plt
 
 import torch
 from torch import nn
@@ -18,7 +18,7 @@ from torchmetrics import (MeanAbsoluteError, R2Score)
 from torchinfo import summary
 from torchvision.io import read_image
 from pytorch_lightning import Trainer
-from pytorch_lightning .loggers import CSVLogger
+from pytorch_lightning.loggers import CSVLogger
 
 from pytorch_lightning .utilities.seed import seed_everything
 
@@ -83,6 +83,7 @@ print("Lasso model error:", lasso_model_error)
 # Fitting a neural network
 print("--- Fitting a Neural Network ---")
 
+# This is the definition of the model structure, defined as a class
 class HittersModel(nn.Module):
     def __init__(self, input_size):
         super(HittersModel, self).__init__ ()
@@ -94,7 +95,9 @@ class HittersModel(nn.Module):
         x = self.flatten(x)
         return torch.flatten(self.sequential(x))
     
-hit_model = HittersModel(X.shape [1])
+
+# Creating a HittersModel object    
+hit_model = HittersModel(X.shape[1])
 
 dl_model_summary = summary(hit_model, input_size=X_train.shape, col_names =['input_size', 'output_size', 'num_params'])
 print(dl_model_summary)
